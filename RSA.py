@@ -46,21 +46,26 @@ if __name__ == '__main__':
         if (e * i - 1) % phi == 0:
             d = i
     print ("d", d)
+    end = time.time()
+    print (end - start)
+    start=time.time()
     m1 = "Confusion In HerEyesThatSaysItAllShe'sLostControl"
+    print("Message: ",m1)
     c = []
     for a in m1:
         temp = 0
         temp = ord(a)
         temp = temp ** e % n
         c.append(temp)
-    print ("c", c)
+    print ("Encrypted text: ", c)
+    end = time.time()
+    print (end - start)
+    start=time.time()
     m2 = ""
     for a in c:
-        temp = 0     
+        temp = 0
         temp = a ** d % n
         m2 = m2 + chr(temp)
-    print("wyswietlanie m2")
-    print(m2)
+    print("Decrypted text: ", m2)
     end=time.time()
     print (end-start)
-    print ("Message: " + m1 + "\n" + "Encrypted text: " + c + "\n" + "Decrypted text: " + m2 + "\n")
