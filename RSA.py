@@ -37,9 +37,9 @@ if __name__ == '__main__':
     print("n", n)
     phi = (p - 1) * (q - 1)
     print("phi", phi)
-    e = random.randrange(1, phi)
+    e = random.randrange(2, phi)
     while not isPrime(e) & isCoPrime(e, phi):
-        e = random.randrange(1, phi)
+        e = random.randrange(2, phi)
     print ("e", e)
     d = 2
     for i in range(2, phi):
